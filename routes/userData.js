@@ -49,7 +49,7 @@ router.post("/add", async (req, res) => {
   await newUser.save();
 });
 
-router.get("/customers", async (req, res) => {
+router.get("/employees", async (req, res) => {
   try {
     const User = await user.find();
     res.send(User);
@@ -62,7 +62,7 @@ router.get("/customers", async (req, res) => {
   }
 });
 
-router.get("/customers/:id", async (req, res) => {
+router.get("/employees/:id", async (req, res) => {
 
   const data = await user.findById(req.params.id);
   // console.log(data);
@@ -72,7 +72,7 @@ router.get("/customers/:id", async (req, res) => {
   }
 });
 
-router.put("/customer/money", async (req, res) => {
+router.put("/employees/money", async (req, res) => {
   // console.log(req.body)
   try {
     const { id, count, id2 } = req.body;
