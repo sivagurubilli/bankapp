@@ -13,7 +13,7 @@ const transSchema = mongoose.Schema({
         required:true
     },
     date:{
-        type:Number,
+        type:String,
       
     },
 
