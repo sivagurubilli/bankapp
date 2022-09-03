@@ -94,14 +94,17 @@ router.put("/employees/money", async (req, res) => {
 
 router.post("/transactions" , async(req,res) => {
   try {
-  const { id, count, id2 } = req.body;
+  const { id, count, id2,date } = req.body;
   const data = await user.findById(id);
   const data2 = await user.findById(id2);
 // console.log(req.body);
+console.log(date)
   const newTrans = new transactions({
     userOne : data.firstName,
     userTwo:data2.firstName,
-    amount:count
+    amount:count,
+    date:date
+
   })
 
   await newTrans.save();

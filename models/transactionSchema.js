@@ -12,6 +12,10 @@ const transSchema = mongoose.Schema({
         type:Number,
         required:true
     },
+    date:{
+        type:Number,
+      
+    },
 
 })
 const transactions = mongoose.model("transactions",transSchema);
